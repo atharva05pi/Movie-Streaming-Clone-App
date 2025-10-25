@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        .main{
+            height: 100%;
+            width: 100%;
+            background-color: black;
+        }
+
+        h1, h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+        }
+
+        h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            margin-bottom: 15px; /* space below title */
+            letter-spacing: 1px; /* spacing between letters */
+            line-height: 1.3; /* spacing between lines */
+            }
+    
+        p {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 400;
+            margin-bottom: 20px; /* space below paragraphs */
+            line-height: 1.6; /* increases readability */
+            letter-spacing: 0.3px;
+        }
+
+        h5 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
+
+
+
+        .section1{
+            height: 600px;
+            width: 100%;
+            border: 2px solid black;
+            background-color: black;
+            
+            
+        }
+        .img{
+            height: 590px;
+            width: 100%;
+            object-fit: cover;
+            overflow: hidden;
+        }
+
+        .section2{
+            height: fit-content;
+            width: 50%;
+        }
+
+        .section1 ,h1 ,p {
+            color: white;
+        }
+
+        .btn_cnt{
+            height: 40px;
+            
+            display: flex;
+            gap: 30px;
+        }
+
+        .custom_btn{
+            background: linear-gradient(135deg, #e50914, #b20710); /* Netflix red gradient */
+            color: white;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+        }
+
+        .genres{
+            list-style: none;
+            display: flex;
+            gap: 20px;
+            padding: 0;
+            color: white;
+        }
+
+        .genres li::before {
+            content: "•";
+            color: white; /* choose color */
+            font-weight: bold;
+            margin-right: 5px;
+        }
+
+
+        .might{
+            height: 100px;
+            display: flex;
+            align-items: center;
+            margin-top: 50px;
+        }
+
+
+        /* General body */
+body {
+  background-color: #141414;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+p{
+     font-family: 'Poppins', sans-serif;
+}
+
+/* 🎬 Movie Card Styles */
+.movie-card {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1),
+              box-shadow 0.35s ease;
+  cursor: pointer;
+  background-color: #000; /* fallback */
+}
+
+/* Movie poster image */
+.movie-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+
+/* Popout hover effect */
+.movie-card:hover {
+  transform: scale(1.15) translateY(-8px);
+  z-index: 10;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Overlay details */
+.movie-card .card-body {
+  background: rgba(0, 0, 0, 0.9);
+  color: #fff;
+  text-align: center;
+  padding: 12px;
+  position: absolute;
+  bottom: -100%; /* hidden initially */
+  left: 0;
+  width: 100%;
+  transition: bottom 0.35s ease-in-out;
+}
+
+/* Slide up details on hover */
+.movie-card:hover .card-body {
+  bottom: 0;
+}
+
+/* Card text styling */
+.movie-card .card-title {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+}
+
+.movie-card .card-text {
+  font-size: 0.9rem;
+  opacity: 0.85;
+}
+
+/* Carousel item spacing */
+.carousel-item .col {
+  flex: 0 0 25%; /* ✅ Always 4 cards per slide */
+  padding: 8px;
+}
+
+/* Optional: Dim neighboring cards when one is hovered */
+.carousel-item:hover .movie-card {
+  opacity: 0.6;
+  transform: scale(0.95);
+}
+
+.carousel-item .movie-card:hover {
+  opacity: 1;
+  transform: scale(1.15) translateY(-8px);
+  z-index: 15;
+}
+
+/* Carousel positioning */
+.carousel-item {
+  position: relative;
+}
+
+/* ✅ Responsive fixes */
+@media (min-width: 768px) {
+  .movie-card img {
+    height: 200px; /* slightly smaller for tablets */
+  }
+}
+@media (max-width: 576px) {
+  .movie-card {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .movie-card img {
+    height: 150px; /* smaller images for mobile */
+    display: block;
+    width: 100%;
+  }
+
+  .section2{
+    width: 100%;
+  }
+  
+
+  .img {
+  width: 100%;
+  height: 590px;  
+  object-fit: fill;
+  overflow: hidden;
+ }
+
+
+  /* hide title + description initially */
+  .movie-card h5, 
+  .movie-card p {
+    display: none;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 5px;
+    font-size: 12px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7); /* black overlay */
+    text-align: center;
+  }
+
+  /* show them on hover */
+  .movie-card:hover h5,
+  .movie-card:hover p {
+    display: block;
+  }
+}
+
+    </style>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+
+
+
+    <title>one-piece</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="main">
+
+                <div class="section1        ">
+                    <div class="image ">
+                        <img src="../assets/strangerthings1.jpg" alt="" class="img">
+                    </div>            
+                </div>
+
+                <div class="section2">
+                 <h1>Stranger Things</h1>
+                 <p>Stranger Things is a science fiction horror series set in the 1980s, where a group of kids uncovers supernatural mysteries after their friend disappears, leading to encounters with a girl with psychic powers and creatures from another dimension. It mixes nostalgia with suspense and adventure.
+                 </p>
+
+                 
+                    <div class="genre">
+                        <ul class="genres">
+                            <a href="" style="text-decoration: none;"><li>adventure</li></a>
+                            <a href="" style="text-decoration: none;"><li>Sci-fi</li></a>
+                            <a href="" style="text-decoration: none;"><li>Thriller</li></a>
+                        </ul>
+
+                    </div>
+
+                    
+
+                 <div class="btn_cnt">  
+                    <button class="custom_btn">watch Now</button>
+                    <button class="custom_btn">Rent The Movie</button>
+                 </div>
+                </div>
+
+                <div class="might">
+                    <h1> You Might Also Like :</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+    <div class="container-fluid mb-5">
+      <div class="row" style="background-color: black;">
+        <div id="cardsCarousel1" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="d-flex">
+                <div class="col">
+                  <div class="card movie-card">
+                    <a href="https://one-piece.com/op/links_eng/" target="_blank">
+                      <img src="../assets/onepiece.jpg" alt="One Piece">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">One Piece</h5>
+                      <p class="card-text">A legendary anime about pirates and adventure.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card movie-card">
+                    <a href="">
+                      <img src="../assets/dexter.jpg" alt="Dexter">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">Dexter</h5>
+                      <p class="card-text">A forensic analyst with a dark secret.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card movie-card">
+                    <a href="#">
+                      <img src="../assets/jjk.jpg" alt="JJK">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">Jujutsu Kaisen</h5>
+                      <p class="card-text">Curses, sorcerers, and high stakes battles.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card movie-card">
+                    <a href="">
+                      <img src="../assets/strangerthings1.jpg" alt="Stranger Things">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">Stranger Things</h5>
+                      <p class="card-text">A small town. A big mystery. Upside Down.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex">
+                <div class="col">
+                  <div class="card movie-card">
+                    <a href=""><img src="../assets/oppen.jpeg" alt="Oppenheimer"></a>
+                    <div class="card-body"><h5 class="card-title">Oppenheimer</h5><p class="card-text">The father of the atomic bomb.</p></div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card movie-card">
+                    <a href=""><img src="../assets/alice in the borderland.jpg" alt="Alice in Borderland"></a>
+                    <div class="card-body"><h5 class="card-title">Alice in Borderland</h5><p class="card-text">Deadly games in a deserted Tokyo.</p></div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card movie-card">
+                    <a href=""><img src="../assets/batman-2020-dark-knight-uz.jpg" alt="Batman"></a>
+                    <div class="card-body"><h5 class="card-title">The Batman</h5><p class="card-text">A darker Gotham needs a darker knight.</p></div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card movie-card">
+                    <a href=""><img src="../assets/demon slayer.jpg" alt="Demon Slayer"></a>
+                    <div class="card-body"><h5 class="card-title">Demon Slayer</h5><p class="card-text">Tanjiro’s quest to save his sister.</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#cardsCarousel1" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#cardsCarousel1" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    
+  </body>
+</html>
