@@ -1,0 +1,299 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-papX5FQ4s2ax8sS4yH3rF3sW6Bfjk5VX2DcH++G8RjppA0FhQ6G3s1mFvA2cR9r9jXd7iM3A4/+1dkcHCp3KQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+ 
+    <title>Hello, world!</title>
+  </head>
+  <body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/0/0c/Netflix_2015_N_logo.svg/1200px-Netflix_2015_N_logo.svg.png" alt="" class="image"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Link</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Catergories
+              </a>
+              <ul class="dropdown-menu active"  aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Action</a></li>
+                <li><a class="dropdown-item" href="#">Horror</a></li>
+                <li><a class="dropdown-item" href="#">anime</a></li>
+                <li><a class="dropdown-item" href="#">Sci-fi</a></li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success" type="submit">Search</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+
+
+    <div class="container-fluid">
+      <div class="row">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active" data-bs-interval="2000">
+              <img src="./assets/onepiece.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>First slide label</h5>
+                <p>Some representative placeholder content for the first slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="./assets/strangerthings1.jpg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Second slide label</h5>
+                <p>Some representative placeholder content for the second slide.</p>
+              </div>
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+              <img src="./assets/oppen.jpeg" class="d-block w-100" alt="...">
+              <div class="carousel-caption d-none d-md-block">
+                <h5>Third slide label</h5>
+                <p>Some representative placeholder content for the third slide.</p>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid">
+      <div class="row">
+        <div class="blackscreen"></div>
+      </div>
+    </div>
+
+    <div class="container-fluid mb-5">
+      <div class="row">
+        <div id="cardsCarousel1" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="d-flex">
+                <div class="col">
+                  <div class="card movie-card">
+                    <a href="./pages/onepiece.html" >
+                      <img src="./assets/onepiece.jpg" alt="One Piece">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">One Piece</h5>
+                      <p class="card-text">A legendary anime about pirates and adventure.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card movie-card">
+                    <a href="./pages/dexter.html">
+                      <img src="./assets/dexter.jpg" alt="Dexter">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">Dexter</h5>
+                      <p class="card-text">A forensic analyst with a dark secret.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card movie-card">
+                    <a href="./pages/jjk.html">
+                      <img src="./assets/jjk.jpg" alt="JJK">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">Jujutsu Kaisen</h5>
+                      <p class="card-text">Curses, sorcerers, and high stakes battles.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card movie-card">
+                    <a href="./pages/strangerthings.html">
+                      <img src="./assets/strangerthings1.jpg" alt="Stranger Things">
+                    </a>
+                    <div class="card-body">
+                      <h5 class="card-title">Stranger Things</h5>
+                      <p class="card-text">A small town. A big mystery. Upside Down.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex">
+                <div class="col">
+                  <div class="card movie-card">
+                    <a href="./pages/oppenhiemer.html"><img src="./assets/oppen.jpeg" alt="Oppenheimer"></a>
+                    <div class="card-body"><h5 class="card-title">Oppenheimer</h5><p class="card-text">The father of the atomic bomb.</p></div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card movie-card">
+                    <a href="./pages/alice.html"><img src="./assets/alice in the borderland.jpg" alt="Alice in Borderland"></a>
+                    <div class="card-body"><h5 class="card-title">Alice in Borderland</h5><p class="card-text">Deadly games in a deserted Tokyo.</p></div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card movie-card">
+                    <a href="./pages/batman.html"><img src="./assets/batman-2020-dark-knight-uz.jpg" alt="Batman"></a>
+                    <div class="card-body"><h5 class="card-title">The Batman</h5><p class="card-text">A darker Gotham needs a darker knight.</p></div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card movie-card">
+                    <a href="./pages/demon_slayer.html"><img src="./assets/demon slayer.jpg" alt="Demon Slayer"></a>
+                    <div class="card-body"><h5 class="card-title">Demon Slayer</h5><p class="card-text">Tanjiro’s quest to save his sister.</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#cardsCarousel1" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#cardsCarousel1" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-fluid mb-5">
+      <div class="row">
+        <div id="cardsCarousel2" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <div class="d-flex">
+                <div class="col">
+                  <div class="card movie-card">
+                    <a href="./pages/vikings.html"><img src="./assets/vikings.jpg" alt="Vikings"></a>
+                    <div class="card-body"><h5 class="card-title">Vikings</h5><p class="card-text">Saga of Ragnar and his legacy.</p></div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card movie-card">
+                    <a href="./pages/avatar.html"><img src="./assets/avatar.jpg" alt="Avatar"></a>
+                    <div class="card-body"><h5 class="card-title">Avatar</h5><p class="card-text">Pandora’s breathtaking world.</p></div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card movie-card">
+                    <a href="./pages/inception.html"><img src="./assets/inception.jpg" alt="Inception"></a>
+                    <div class="card-body"><h5 class="card-title">Inception</h5><p class="card-text">Dreams within dreams.</p></div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card movie-card">
+                    <a href="./pages/insterstellar.html"><img src="./assets/interstellar.jpg" alt="Interstellar"></a>
+                    <div class="card-body"><h5 class="card-title">Interstellar</h5><p class="card-text">Love, time, and space.</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div class="d-flex">
+                <div class="col">
+                  <div class="card movie-card">
+                    <a href="./pages/IT.html"><img src="./assets/pennywise.jpg" alt="IT"></a>
+                    <div class="card-body"><h5 class="card-title">IT</h5><p class="card-text">Killer clown terror</p></div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card movie-card">
+                    <a href="./pages/peakyblinders.html"><img src="./assets/peaky bliners.jpg" alt="Peaky-Blinders"></a>
+                    <div class="card-body"><h5 class="card-title">Peaky-Blinders</h5><p class="card-text">Rise of shelby gang in post-WWI Birmingham.</p></div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card movie-card">
+                    <a href="./pages/moneyheist.html"><img src="./assets/money_heist.png" alt="money_heist"></a>
+                    <div class="card-body"><h5 class="card-title">Money-heist</h5><p class="card-text">Daring heist on Spain’s Royal Mint.</p></div>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="card movie-card">
+                    <a href="./pages/annabelle.html"><img src="./assets/annabelle.jpg" alt="annabelle"></a>
+                    <div class="card-body"><h5 class="card-title">Annabelle</h5><p class="card-text">A haunted doll unleashes evil.</p></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#cardsCarousel2" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button class="carousel-control-next" type="button" data-bs-target="#cardsCarousel2" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+<div class="container-fluid">
+  <div class="row">
+    <footer class="text-center bg-dark text-white">
+      <div class="container pt-4">
+        <section class="mb-4">
+          <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!" role="button"><i class="fab fa-facebook-f"></i></a>
+          <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!" role="button"><i class="fab fa-twitter"></i></a>
+          <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!" role="button"><i class="fab fa-google"></i></a>
+          <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!" role="button"><i class="fab fa-instagram"></i></a>
+          <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!" role="button"><i class="fab fa-linkedin"></i></a>
+          <a class="btn btn-link btn-floating btn-lg text-white m-1" href="#!" role="button"><i class="fab fa-github"></i></a>
+        </section>
+      </div>
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.8);">
+        © 2020 Copyright:
+        <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+      </div>
+    </footer>
+  </div>
+</div>
+
+    <script src="hoverPreview.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  </body>
+</html>
